@@ -72,8 +72,6 @@ public class RemoveOutermostParentheses {
                 stringBuilder.append(c);         
             }
             if(c=='(') ++level;
-            
-
         }
         return stringBuilder.toString();
 

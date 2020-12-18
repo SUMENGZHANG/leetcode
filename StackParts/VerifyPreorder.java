@@ -70,7 +70,7 @@ public class VerifyPreorder {
 
     public static void main(String[] args) {
         int []arr = {1,3,4,2};
-        System.out.println(verifyPreorderTry(arr));
+        System.out.println(verifyPreorderAD(arr));
     }
 
     

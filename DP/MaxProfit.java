@@ -74,7 +74,7 @@ public class MaxProfit {
     }
 
     public static void main(String[] args) {
-        int []prices = {1,3,2,8,4,9};
+        int []prices = {7,1,5,3,6,4};
         int fee = 2;
         System.out.println(maxProfitWithGreedy(prices, fee));
     }

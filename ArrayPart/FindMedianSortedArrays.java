@@ -114,6 +114,15 @@ public class FindMedianSortedArrays {
         return right;
           
     }
+    
+    /**
+     *  时间复杂度为O(log(m+n))
+     *  二分法
+     */
+    public static double findMedianSortedArraysAD(int []nums1,int[]nums2){
+            return 0.0;
+
+    }
     public static void main(String[] args) {
         int []nums1 = {0,0};
         int []nums2 = {0,0};

@@ -9,6 +9,7 @@
  */
 public class FindShortestSubArray {
     public int findShortestSubArray(int[] nums) {
+        return 0;
 
     }
     

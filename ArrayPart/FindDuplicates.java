@@ -11,22 +11,27 @@ import java.util.*;
  * 
  */
 public class FindDuplicates {
+    /**
+     *  可以结合448 加强理解  https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array
+     */
     public static List<Integer> findDuplicates(int[] nums) {
         List<Integer> res = new ArrayList<>();
         for(int i = 0;i<nums.length;i++){
             // 拿到该点的值，当作一个下标,防止被*-1
-             int index = Math.abs(nums[i]);
+             int num = Math.abs(nums[i]);
              //
-             
-             nums[index-1] *= -1;
+             int index = num-1;
+             if(nums[index]<0){
+                 res.add(index+1);
+             }else{
+                nums[index] *= -1;
+
+             }   
              
         }
 
-        for(int i = 0;i<nums.length;i++){
-            if(nums[i]>0){
-                res.add(i+1);
-            }
-        }
+        
+
         return res;
 
     }

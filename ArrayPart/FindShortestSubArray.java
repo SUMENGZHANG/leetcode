@@ -39,6 +39,10 @@ public class FindShortestSubArray {
 
        return minVal;
         
+=======
+    public int findShortestSubArray(int[] nums) {
+        return 0;
+>>>>>>> 2b44e24a40e8b6b2f7dcdaaff146b2e4e898a2aa
 
     }
      // 找到第一个max 和最后一个max返回长度

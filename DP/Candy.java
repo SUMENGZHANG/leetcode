@@ -74,9 +74,7 @@ public class Candy {
                 }
                 count +=dec;
                 pre = 1;
-
-
-
+                
             }
         }
         return count;

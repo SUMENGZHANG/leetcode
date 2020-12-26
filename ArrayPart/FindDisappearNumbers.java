@@ -24,7 +24,7 @@ public class FindDisappearNumbers {
         int len = nums.length;
         int midNum = 0;
         // for loop to find the same numbers
-        for (int i = 1;i<len;i++){
+        /*for (int i = 1;i<len;i++){
             if(nums[i]==nums[i-1]){
                 dupNum++;
             }else if(nums[i]>nums[i-1]+1){
@@ -36,7 +36,7 @@ public class FindDisappearNumbers {
                 }
             
             }
-        }
+        }*/
         if(midNum<dupNum){
             // 存在最左边和最右边的问题
             if(nums[nums.length-1]<len){

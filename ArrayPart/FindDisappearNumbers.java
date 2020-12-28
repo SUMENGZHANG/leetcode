@@ -23,6 +23,9 @@ public class FindDisappearNumbers {
         int dupNum = 0;
         int len = nums.length;
         int midNum = 0;
+
+
+        
         // for loop to find the same numbers
         /*for (int i = 1;i<len;i++){
             if(nums[i]==nums[i-1]){
@@ -30,15 +33,7 @@ public class FindDisappearNumbers {
             }else if(nums[i]>nums[i-1]+1){
                 //不满足o(n)但是先 试下
                 for(int j = 1;j<nums[i]-nums[i-1];j++){
-                    res.add(nums[i-1]+j);
-                    midNum++;
-
-                }
-            
-            }
-        }*/
-        if(midNum<dupNum){
-            // 存在最左边和最右边的问题
+     冲  存在最左边和最右边的问题*/
             if(nums[nums.length-1]<len){
                 for(int j = 1;j<=len-nums[nums.length-1];j++){
                     res.add(nums[nums.length-1]+j);
@@ -49,14 +44,10 @@ public class FindDisappearNumbers {
                     res.add(nums[0]-j);
                 }
             }
-
-
-        }
-        return res;
-        
-
+            return res;
 
     }
+        
 
 
     /**

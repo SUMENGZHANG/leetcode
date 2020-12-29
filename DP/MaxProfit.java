@@ -64,7 +64,6 @@ public class MaxProfit {
                 profit += prices[i]-buy;
                 // 不需要加fee并不是真正的卖出
                 buy = prices[i];
-                
             }
         }
 

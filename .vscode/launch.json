@@ -1,0 +1,203 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AdvancedGenerate",
+            "request": "launch",
+            "mainClass": "AdvancedGenerate",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Candy",
+            "request": "launch",
+            "mainClass": "Candy",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch CheckPossibility",
+            "request": "launch",
+            "mainClass": "CheckPossibility",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindDisappearNumbers",
+            "request": "launch",
+            "mainClass": "FindDisappearNumbers",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindDuplicates",
+            "request": "launch",
+            "mainClass": "FindDuplicates",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindErrorNums",
+            "request": "launch",
+            "mainClass": "FindErrorNums",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindMaxConsecutiveOnes",
+            "request": "launch",
+            "mainClass": "FindMaxConsecutiveOnes",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindMedianSortedArrays",
+            "request": "launch",
+            "mainClass": "FindMedianSortedArrays",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindMissingPostive",
+            "request": "launch",
+            "mainClass": "FindMissingPostive",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindPositionDuration",
+            "request": "launch",
+            "mainClass": "FindPositionDuration",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindShortestSubArray",
+            "request": "launch",
+            "mainClass": "FindShortestSubArray",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Generate",
+            "request": "launch",
+            "mainClass": "Generate",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch HIndex",
+            "request": "launch",
+            "mainClass": "HIndex",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch MaxCount",
+            "request": "launch",
+            "mainClass": "MaxCount",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch MaxProfit",
+            "request": "launch",
+            "mainClass": "MaxProfit",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch MaxProfitAd",
+            "request": "launch",
+            "mainClass": "MaxProfitAd",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch MaxProfitEasy",
+            "request": "launch",
+            "mainClass": "MaxProfitEasy",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch MaxProfitTwo",
+            "request": "launch",
+            "mainClass": "MaxProfitTwo",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch MaximumProduct",
+            "request": "launch",
+            "mainClass": "MaximumProduct",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinCostClimbing",
+            "request": "launch",
+            "mainClass": "MinCostClimbing",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinMoves",
+            "request": "launch",
+            "mainClass": "MinMoves",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinPatches",
+            "request": "launch",
+            "mainClass": "MinPatches",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch MoveZeros",
+            "request": "launch",
+            "mainClass": "MoveZeros",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch RemoveDeplicates",
+            "request": "launch",
+            "mainClass": "RemoveDeplicates",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThirdMax",
+            "request": "launch",
+            "mainClass": "ThirdMax",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch TwoSum",
+            "request": "launch",
+            "mainClass": "TwoSum",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch UniquePaths",
+            "request": "launch",
+            "mainClass": "UniquePaths",
+            "projectName": "leetcode_e3af503d"
+        }
+    ]
+}

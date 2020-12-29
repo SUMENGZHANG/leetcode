@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Rotate",
+            "request": "launch",
+            "mainClass": "Rotate",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

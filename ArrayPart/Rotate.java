@@ -25,22 +25,42 @@ public class Rotate {
      * 旋转数组
      */
     public static  void rotateWithReverse(int[] nums, int k) {
-         // 反转所有的数
+         
+         k = k%nums.length;
+         // 反转所有的数  1234567 -》 7654321
+         reverse(nums, 0, nums.length-1);
 
-         // 
+         //  反转前 k个数 
+         reverse(nums, 0, k-1);
+
+         // 反转后  len-k反转
+         reverse(nums, k, nums.length-1);
 
 
-   
+       
     }
     public static void reverse(int []nums,int start,int end){
+        while(start<end){
+            int curVal = nums[start];
+            nums[start] = nums[end];
+            nums[end] = curVal;
+            start++;
+            end--;
+        }
         
+
+    }
+    /**
+     *  环状数组
+     */
+    public static void circle(int []nums){
 
     }
 
     public static void main(String[] args) {
-        int []nums = {1,2,3,4,5,6,7};
-        int k = 3;
-        rotate(nums, k);
+        int []nums = {-1};
+        int k = 2;
+        rotateWithReverse(nums, k);
         for (int i : nums) {
             System.out.println(i);
         }

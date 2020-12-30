@@ -1,4 +1,5 @@
-import java.util.Arrays;
+
+import java.util.*;
 
 /**
  * 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
@@ -30,11 +31,43 @@ public class TwoSum {
 
 
     }
+    /**
+     * 哈希表解决问题
+     * @param args
+     */
+    public static int[] twoSumWithHash(int[] nums, int target) {
+        int []res = new int[2];
+        Map<Integer,Integer> hashMap = new HashMap<>();
+        for (int i = 0;i<nums.length;i++) 
+        {
+            hashMap.put(nums[i], i);
+               
+        }
+        for(int i = 0;i<nums.length;i++){
+            if(hashMap.containsKey(target-nums[i])){
+                if(hashMap.get(target-nums[i])!=i){
+                    res[0] = i;
+                    res[1] = hashMap.get(target-nums[i]);
+                    return res;
+
+                }
+
+                 
+            }
+        }
+
+        return res;
+        
+
+
+}
+    
     public static void main(String[] args) {
-        int []nums = {2,7,11,15};
-        int target = 9;
-        System.out.println(twoSum(nums, target)[0]);
-        System.out.println(twoSum(nums, target)[1]);
+        int []nums = {3,2,4};
+        int target = 6;
+        int []res = twoSumWithHash(nums, target);
+        System.out.println(res[0]);
+        System.out.println(res[1]);
 
     }
    

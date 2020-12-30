@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PlusOne",
+            "request": "launch",
+            "mainClass": "PlusOne",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch InterSet",
+            "request": "launch",
+            "mainClass": "InterSet",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch SingleNumber",
+            "request": "launch",
+            "mainClass": "SingleNumber",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
             "name": "Launch Rotate",
             "request": "launch",
             "mainClass": "Rotate",

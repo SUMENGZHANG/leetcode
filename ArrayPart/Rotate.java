@@ -54,6 +54,7 @@ public class Rotate {
      *  环状数组
      */
     public static void circle(int []nums){
+        // just empty
 
     }
 

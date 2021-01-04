@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MyAtoi",
+            "request": "launch",
+            "mainClass": "MyAtoi",
+            "projectName": "leetcode_68702ff4"
+        },
+        {
+            "type": "java",
             "name": "Launch IsPalindrome",
             "request": "launch",
             "mainClass": "IsPalindrome",

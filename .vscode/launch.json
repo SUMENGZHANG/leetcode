@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch IsPalindrome",
+            "request": "launch",
+            "mainClass": "IsPalindrome",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch IsAnagram",
+            "request": "launch",
+            "mainClass": "IsAnagram",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Reverse",
+            "request": "launch",
+            "mainClass": "Reverse",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReverseString",
+            "request": "launch",
+            "mainClass": "ReverseString",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
             "name": "Launch PlusOne",
             "request": "launch",
             "mainClass": "PlusOne",

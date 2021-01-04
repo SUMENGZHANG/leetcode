@@ -1,75 +1,95 @@
+
+
 /**
  * 
  */
 public class MyAtoi {
     /**
-     * 1. 遍历，得到的所有数值都放入一个容器
-     * 2. 求出长度最长的，保存符号
+     * 1. 遍历，得到的所有数值都放入一个容器 2. 求出长度最长的，保存符号
+     * 
      * @param s
      * @return
      */
     public static int myAtoi(String s) {
-        char []arr = s.toCharArray();
+        
+        if(s.length()==0) return 0 ;
+        char[] arr = s.toCharArray();
+        if (arr.length == 1) {
+            if (arr[0] - '0' >= 0 && arr[0] - '0' <= 9)
+                return arr[0]-'0';
+            else
+                return 0;
+        }
         // 创建一个容器
-        long []res = new long[s.length()];
-        int []sign = new int[s.length()];
+        long rest = 0;
+        int sign = 0;
         // 快慢指针遍历 存入每一个数值
         int indexOne = 0;
-        int indexTwo = 0;
-        int count = 0;
-        while(indexOne<arr.length){
-            indexTwo = indexOne;
-            // 在长度之内的数字
-            while(indexTwo<arr.length&&((int)arr[indexTwo]>=0&&(int)arr[indexTwo]<=9)){
-                indexTwo++;
+        int indexTwo = 1;
+        char now = arr[indexOne];
+        while (indexOne < arr.length && arr[indexOne] == ' ')
+            indexOne++;
+        if (indexOne == arr.length)
+            return 0;
+        indexTwo = indexOne + 1;
+        // 第一位是数字
+        // 第一位是正负号且第二位是数字
+        if (!(((arr[indexOne] == '-'||arr[indexOne]=='+')&& (
+               arr[indexTwo] - '0' >= 0 && arr[indexTwo] - '0' <= 9))
+                || (arr[indexOne] - '0' >= 0 && arr[indexOne] - '0' <= 9)))
+            return 0;
+
+        // 第一位肯定是正负或者数字了，如果不是数字就往后挪动
+        while (!(arr[indexOne] - '0' >= 0 && arr[indexOne] - '0' <= 9)) {
+            indexOne++;
+        }
+        indexTwo = indexOne;
+
+        // 在长度之内的数字
+        while (indexTwo < arr.length && (arr[indexTwo] - '0' >= 0 && arr[indexTwo] - '0' <= 9)) {
+            indexTwo++;
+        }
+        // 切割字符串，然后往后挪
+        String curVal = s.substring(indexOne, indexTwo);
+        if (curVal != null || curVal.equals(" ")) {
+            // 去除前面为0的数
+            curVal = curVal.replaceFirst("^0*", "");
+            if(curVal.length()==0) return 0;
+            // 判断是否为负数
+            if (indexOne == 0 || (indexOne >= 1 && arr[indexOne - 1] != '-')) {
+                sign = 0;
+            } else {
+                sign = 1;
             }
-            // 切割字符串，然后往后挪
-            String curVal = s.substring(indexOne,indexTwo);
-            if(curVal!=null){
-                res[count] = Long.parseLong(curVal);
-                // 判断是否为负数
-                if(indexOne==0||(indexOne>=1&&arr[indexOne-1]!='-')){
-                    sign[count] = 0;
+            if(curVal.length()>10){
+                if(sign==0){
+                    rest = Integer.MAX_VALUE;
+                    return (int) rest;
+
                 }else{
-                    sign[count] = 1;
+                    rest = Integer.MIN_VALUE;
+                    return (int)rest;
                 }
-                
-            }
-            count++;
-            indexOne = indexTwo+1;
-        }
-        // 
-        long max = Integer.MIN_VALUE;
-        long min = Integer.MAX_VALUE;
 
-        for(int i = 0;i<count;i++){
-            long nowVal = 0;
-            // 还原数字
-            if(sign[i]==0){
-                nowVal = res[i];
-                
             }else{
-                nowVal = -res[i];
+                rest = Long.valueOf(curVal);
             }
-
-            // 考虑极值
-            if(res[i]>Integer.MAX_VALUE) res[i] = Integer.MAX_VALUE;
-            if(res[i]<Integer.MIN_VALUE) res[i] = Integer.MIN_VALUE;
             
-           max = Math.max(res[i], max);
-           min = Math.min(res[i],min);
 
         }
 
-
-        return Math.abs(max)>Math.abs(min)?(int)max:(int)min;
+        if (sign == 1)
+            rest = -rest;
+        if(rest>Integer.MAX_VALUE) rest = Integer.MAX_VALUE;
+        if(rest<Integer.MIN_VALUE) rest = Integer.MIN_VALUE;
+        return (int) rest;
 
     }
+
     public static void main(String[] args) {
-        String s = "4193 with words";
+        String s = "2147483648";
         System.out.println(myAtoi(s));
 
-
     }
-    
+
 }

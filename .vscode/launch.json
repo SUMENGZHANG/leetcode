@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LongestCommonPrefix",
+            "request": "launch",
+            "mainClass": "LongestCommonPrefix",
+            "projectName": "leetcode_68702ff4"
+        },
+        {
+            "type": "java",
+            "name": "Launch countAndSay",
+            "request": "launch",
+            "mainClass": "countAndSay",
+            "projectName": "leetcode_68702ff4"
+        },
+        {
+            "type": "java",
+            "name": "Launch StrStr",
+            "request": "launch",
+            "mainClass": "StrStr",
+            "projectName": "leetcode_68702ff4"
+        },
+        {
+            "type": "java",
             "name": "Launch MyAtoi",
             "request": "launch",
             "mainClass": "MyAtoi",

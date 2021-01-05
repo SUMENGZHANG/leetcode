@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MyAtoi",
+            "request": "launch",
+            "mainClass": "MyAtoi",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch LargeGroupPosition",
+            "request": "launch",
+            "mainClass": "LargeGroupPosition",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
             "name": "Launch ReverseString",
             "request": "launch",
             "mainClass": "ReverseString",

@@ -6,6 +6,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch MaxSlidingWindow",
             "request": "launch",
             "mainClass": "MaxSlidingWindow",
@@ -17,6 +18,26 @@
             "request": "launch",
             "mainClass": "Flower",
             "projectName": "leetcode_e3af503d"
+=======
+            "name": "Launch LongestCommonPrefix",
+            "request": "launch",
+            "mainClass": "LongestCommonPrefix",
+            "projectName": "leetcode_68702ff4"
+        },
+        {
+            "type": "java",
+            "name": "Launch countAndSay",
+            "request": "launch",
+            "mainClass": "countAndSay",
+            "projectName": "leetcode_68702ff4"
+        },
+        {
+            "type": "java",
+            "name": "Launch StrStr",
+            "request": "launch",
+            "mainClass": "StrStr",
+            "projectName": "leetcode_68702ff4"
+>>>>>>> e83f9291e5f5c62ae6af7e087fe5291bc8cb1972
         },
         {
             "type": "java",

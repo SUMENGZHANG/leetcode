@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MaxSlidingWindow",
+            "request": "launch",
+            "mainClass": "MaxSlidingWindow",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
+            "name": "Launch Flower",
+            "request": "launch",
+            "mainClass": "Flower",
+            "projectName": "leetcode_e3af503d"
+        },
+        {
+            "type": "java",
             "name": "Launch MyAtoi",
             "request": "launch",
             "mainClass": "MyAtoi",

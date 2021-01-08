@@ -52,16 +52,48 @@ public class Rotate {
     }
     /**
      *  环状数组
+     *  
      */
-    public static void circle(int []nums){
-        // just empty
+    public static void circle(int []nums,int k){
+         int len = nums.length;
+         k = k%len;
+         int count = gcd(k, len);
+         for(int i = 0;i<count;i++){
+             int curVal = nums[i];
+             int index = i;
+             do{
+                 // i 和  i+K%len换
+                int nextIndex = (index+k)%len;
+                int nextVal =  nums[nextIndex];
+               
+                nums[nextIndex] = curVal;
+                curVal = nextVal;
+                index = nextIndex;
+                
+              
+                
+             }while(index!=i);
+
+
+
+         }
+
+        
 
     }
 
+    /**
+     * 最大公约数
+     */
+    public static int gcd(int x, int y) {
+        return y > 0 ? gcd(y, x % y) : x;
+    }
+
     public static void main(String[] args) {
-        int []nums = {-1};
-        int k = 2;
-        rotateWithReverse(nums, k);
+        int []nums = {1,2,3,4,5,6,7};
+        int k = 3;
+      
+        circle(nums, k);
         for (int i : nums) {
             System.out.println(i);
         }

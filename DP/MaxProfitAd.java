@@ -61,7 +61,7 @@ public class MaxProfitAd {
 
     }
     public static void main(String[] args) {
-        int []prices = {3,2,6,5,0,3};
+        int[] prices = { 3, 3, 5, 0, 0, 3, 1, 4 };
         int k = 2;
         System.out.println(maxProfit(k, prices));
         

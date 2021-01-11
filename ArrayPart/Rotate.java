@@ -65,17 +65,10 @@ public class Rotate {
                  // i 和  i+K%len换
                 int nextIndex = (index+k)%len;
                 int nextVal =  nums[nextIndex];
-               
                 nums[nextIndex] = curVal;
                 curVal = nextVal;
                 index = nextIndex;
-                
-              
-                
              }while(index!=i);
-
-
-
          }
 
         

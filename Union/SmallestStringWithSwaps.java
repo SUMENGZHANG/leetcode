@@ -25,10 +25,21 @@ public class SmallestStringWithSwaps {
             int indexTwo = pair.get(1);
             unionFind.union(indexOne,indexTwo);
         }
-        // 
-        
+        // 构建映射关系
+        char []charArr = s.toCharArray();
+        Map<Integer,PriorityQueue<Character>> hashMap = new HashMap<>(len);
+        for(int i = 0;i<len;i++){
+            int root = uunionFind.find(i);
+            hashMap.computeIfAbsent(root, key->new PriorityQueue<>()).offer(charArr[i]);
 
-        
+        }
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int i = 0;i<len;i++){
+            int root = unionFind.find(i);
+            stringBuilder.append(hashMap.get(root).poll());
+        }
+        return stringBuilder.toString();
 
+    
     }
 }

@@ -29,9 +29,8 @@ public class SmallestStringWithSwaps {
         char []charArr = s.toCharArray();
         Map<Integer,PriorityQueue<Character>> hashMap = new HashMap<>(len);
         for(int i = 0;i<len;i++){
-            int root = uunionFind.find(i);
+            int root = unionFind.find(i);
             hashMap.computeIfAbsent(root, key->new PriorityQueue<>()).offer(charArr[i]);
-
         }
         StringBuilder stringBuilder = new StringBuilder();
         for(int i = 0;i<len;i++){

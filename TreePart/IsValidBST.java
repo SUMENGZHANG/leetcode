@@ -37,8 +37,8 @@ public class IsValidBST {
     }
     public static boolean dfs(TreeNode root,Integer min,Integer max){
         if(root==null) return true;
-        if(min!=null&&root.val<min) return false;
-        if(max!=null&&root.val>max) return false;
+        if(min!=null&&root.val<=min) return false;
+        if(max!=null&&root.val>=max) return false;
         if(!dfs(root.right, root.val, max)) return false;
         if(!dfs(root.left,min,root.val)) return false;
         return true;

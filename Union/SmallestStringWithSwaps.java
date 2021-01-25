@@ -18,15 +18,7 @@ public class SmallestStringWithSwaps {
         // 总体思路根据下标的 集合对，将数组的下标分组   组内的下标可以自由排序
 
         // 遍历下标对，建立并查集
-        int len = s.length();
-        UnionFind unionFind = new UnionFind();
-        for (List<Integer> pair : pairs) {
-            int indexOne = pair.get(0);
-            int indexTwo = pair.get(1);
-            unionFind.union(indexOne,indexTwo);
-        }
-        // 
-        
+       return "";
 
         
 

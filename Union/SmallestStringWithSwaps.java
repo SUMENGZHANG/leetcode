@@ -18,9 +18,33 @@ public class SmallestStringWithSwaps {
         // 总体思路根据下标的 集合对，将数组的下标分组   组内的下标可以自由排序
 
         // 遍历下标对，建立并查集
+<<<<<<< HEAD
        return "";
 
         
+=======
+        int len = s.length();
+        UnionFind unionFind = new UnionFind();
+        for (List<Integer> pair : pairs) {
+            int indexOne = pair.get(0);
+            int indexTwo = pair.get(1);
+            unionFind.union(indexOne,indexTwo);
+        }
+        // 构建映射关系
+        char []charArr = s.toCharArray();
+        Map<Integer,PriorityQueue<Character>> hashMap = new HashMap<>(len);
+        for(int i = 0;i<len;i++){
+            int root = unionFind.find(i);
+            hashMap.computeIfAbsent(root, key->new PriorityQueue<>()).offer(charArr[i]);
+        }
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int i = 0;i<len;i++){
+            int root = unionFind.find(i);
+            stringBuilder.append(hashMap.get(root).poll());
+        }
+        return stringBuilder.toString();
+>>>>>>> 4441175c08cc92ff11f2d92dc2d0359f306f042c
 
+    
     }
 }

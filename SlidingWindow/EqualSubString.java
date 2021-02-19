@@ -5,8 +5,6 @@ public class EqualSubString {
     /**
      * 我的解决思路
      * 1 滑动窗口
-     * 
-     * 
      * @param s
      * @param t
      * @param maxCost
@@ -20,7 +18,6 @@ public class EqualSubString {
         int right = 0;
         int maxWindow = 0;
         while(right<len){
-            
             cost +=Math.abs(s.charAt(right)-t.charAt(right));
             // 如果目前窗口可以被转化，消耗小于最大消耗那么就扩大窗口（），不然就移动窗口
             while(cost>maxCost){
@@ -29,12 +26,9 @@ public class EqualSubString {
             }
             maxWindow = Math.max(maxWindow,right-left+1);
             right++;
-           
         }
 
         return maxWindow;
-
-
     }
     public static void main(String[] args) {
         String s = "pxezla";

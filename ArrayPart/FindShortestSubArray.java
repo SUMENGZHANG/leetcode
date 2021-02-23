@@ -9,6 +9,11 @@ import java.util.*;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class FindShortestSubArray {
+    /**
+     *  简单版本
+     * @param nums
+     * @return
+     */
     public static int findShortestSubArray(int[] nums) {
         int max = 0;
         // 求出最大的频率的数据存入map
@@ -60,6 +65,40 @@ public class FindShortestSubArray {
         }
         return right-left+1;
       
+
+    }
+    /**
+     * 
+     * @param nums
+     * @return
+     */
+    public int findShortestSubArraySimple(int[] nums){
+        // 这个数组结构是 {数量，初始位置，最后的位置}
+        Map<Integer,int[]> map = new HashMap<Integer,int[]>();
+        int n = nums.length;
+        for(int i = 0;i<n;i++){
+            if(map.containsKey(nums[i])){
+                map.get(nums[i])[0]++;
+                map.get(nums[i])[2] = i;
+            }else{
+                map.put(nums[i],new int[]{1,i,i});
+            }
+        }
+        int maxNum = 0;
+        int minLen = 0;
+        for (Map.Entry<Integer, int[]> entry: map.entrySet()) {
+            int[] arr = entry.getValue();
+            if(maxNum<arr[0]){
+                maxNum = arr[0];
+                minLen = arr[2]-arr[1]+1;
+            }else if(maxNum==arr[0]){
+                if(minLen>arr[2]-arr[1]+1){
+                    minLen = arr[2]-arr[1]+1;
+                }
+            }
+        }
+        return minLen;
+
 
     }
 
